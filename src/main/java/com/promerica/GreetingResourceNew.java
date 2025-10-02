@@ -17,7 +17,7 @@ public class GreetingResourceNew {
     }
 
     @GET
-    @Path("/ping/pong")
+    @Path("/pong")
     @Produces(MediaType.APPLICATION_JSON)
     public Persona pong() {
         Persona persona = new Persona();
