@@ -7,7 +7,7 @@ metadata:
   uid: f2f930db-762a-4803-93b6-862c2f6398de
 spec:
   rules:
-    - host: ejemplo-promerica-2.apps.promnet.com.sv
+    - host: ejemplo-promerica-1.apps.promnet.com.sv
       http:
         paths:
           - backend:
