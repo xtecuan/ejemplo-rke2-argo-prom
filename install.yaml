@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
     app.kubernetes.io/managed-by: quarkus
   name: ejemplo-promerica
-  namespace: promerica
+  namespace: promerica-new
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -19,7 +19,7 @@ metadata:
     app.kubernetes.io/name: ejemplo-promerica
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
   name: ejemplo-promerica-view
-  namespace: promerica
+  namespace: promerica-new
 roleRef:
   kind: ClusterRole
   apiGroup: rbac.authorization.k8s.io
@@ -27,7 +27,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: ejemplo-promerica
-    namespace: promerica
+    namespace: promerica-new
 ---
 apiVersion: v1
 kind: Service
@@ -40,7 +40,7 @@ metadata:
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
     app.kubernetes.io/managed-by: quarkus
   name: ejemplo-promerica
-  namespace: promerica
+  namespace: promerica-new
 spec:
   ports:
     - name: http
@@ -63,7 +63,7 @@ metadata:
     app.kubernetes.io/version: 1.0.0-SNAPSHOT
     app.kubernetes.io/managed-by: quarkus
   name: ejemplo-promerica
-  namespace: promerica
+  namespace: promerica-new
 spec:
   replicas: 1
   selector:

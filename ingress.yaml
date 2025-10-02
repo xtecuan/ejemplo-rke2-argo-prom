@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ejemplo-promerica-ingress
+  namespace: promerica-new
+  resourceVersion: '1778703'
+  uid: f2f930db-762a-4803-93b6-862c2f6398de
+spec:
+  rules:
+    - host: ejemplo-promerica-1.apps.promnet.com.sv
+      http:
+        paths:
+          - backend:
+              service:
+                name: ejemplo-promerica
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
